@@ -1,6 +1,6 @@
 import openai
 
-openai.my_api_key = ''
+openai.api_key = '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'
 
 messages = [ {"role": "system", "content": 
               "You are a intelligent assistant."} ]
@@ -11,7 +11,7 @@ while True:
             {"role": "user", "content": message},
         )
         chat = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", messages=messages
+            model="text-davinci-002", messages=messages
         )
     reply = chat.choices[0].message.content
     print(f"ChatGPT: {reply}")
